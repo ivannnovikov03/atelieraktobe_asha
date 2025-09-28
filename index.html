@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionStore - Интернет-магазин одежды</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Верхнее меню -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>FashionStore</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#sales">Акции</a></li>
+                <li><a href="#new">Новинки</a></li>
+                <li><a href="#custom">Индивидуальный пошив</a></li>
+                <li><a href="#about">О нас</a></li>
+            </ul>
+            <div class="nav-cart">
+                <button class="cart-btn" id="cartButton">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный баннер -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Новая коллекция 2024</h1>
+            <p>Стиль, который говорит за вас</p>
+            <button class="cta-button" onclick="scrollToCatalog()">Перейти в каталог</button>
+        </div>
+    </section>
+
+    <!-- Секция категорий -->
+    <section class="categories">
+        <div class="category-grid">
+            <div class="category-card" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                <h3>Акции</h3>
+                <p>Скидки до 50%</p>
+            </div>
+            <div class="category-card" style="background: linear-gradient(135deg, #4834d4, #686de0);">
+                <h3>Новинки</h3>
+                <p>Свежие поступления</p>
+            </div>
+            <div class="category-card" style="background: linear-gradient(135deg, #00d2d3, #54a0ff);">
+                <h3>Индивидуальный пошив</h3>
+                <p>Одежда по вашим меркам</p>
+            </div>
+            <div class="category-card" style="background: linear-gradient(135deg, #f368e0, #ff9ff3);">
+                <h3>Распродажа</h3>
+                <p>Товары со скидкой</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция товаров -->
+    <section class="products" id="catalog">
+        <h2>Популярные товары</h2>
+        <div class="products-grid" id="productsGrid">
+            <!-- Товары будут сгенерированы через JavaScript -->
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FashionStore</h3>
+                <p>Современная одежда для стильных людей</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>+7 (999) 999-99-99</p>
+                <p>info@fashionstore.ru</p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка WhatsApp -->
+    <button class="whatsapp-btn" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- Модальное окно корзины -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="close-btn" onclick="closeCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Товары в корзине -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    Итого: <span id="cartTotal">0</span> руб.
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
